@@ -1,0 +1,72 @@
+body{
+    background: rgb(61,64,61);
+    background: linear-gradient(135deg, rgba(61,64,61,1) 10%, rgba(97,102,98,1) 100%);
+    color: #dae6dc;
+}
+
+h3{
+    text-shadow: 2px 2px #181a18;
+    text-align: center;
+}
+
+.InterfaceAlchimie{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.InterfaceSlots{
+    display: flex;
+    gap: 15px;    
+}
+
+.Solvant{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ingredients{
+    flex:4;
+}
+
+.IngredientsTitle{
+    display: flex;   
+    align-items: center;
+    gap: 15px;
+}
+
+.IngredientsTitle > h3{
+    flex:1;
+}
+
+.IngredientsTitle > div{
+    width: 25px;
+}
+
+.IngredientsSlots{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+    justify-content: center;
+}
+
+.Case{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #181a18;    
+    background: rgb(61,64,61);
+    background: linear-gradient(315deg, rgba(61,64,61,1) 10%, rgba(97,102,98,1) 100%);
+    border-radius: 15%;
+}
+
+.Case.Disabled{
+    opacity: .3;
+    border-style: dashed;
+}
+
+.Result{
+    align-self: center;
+}
