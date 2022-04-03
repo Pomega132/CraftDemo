@@ -1,0 +1,20 @@
+[
+    {
+        "Nom": "Potion de soin",
+        "Image": "/Img/12016.png",
+        "SolvantId": 1,
+        "IngredientsIds": [ 2, 2, 2, 3 ],
+        "Connue": true,
+        "Difficulte": 10,
+        "Rarity": "Green"
+    },
+    {
+        "Nom": "Dynamite",
+        "Image": "/Img/12016.png",
+        "SolvantId": 1,
+        "IngredientsIds": [ 2, 3, 3 ],
+        "Connue": false,
+        "Difficulte": 5,
+        "Rarity": "White"
+    }
+]

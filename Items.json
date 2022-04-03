@@ -1,0 +1,30 @@
+[
+	{
+		"Id": 1,
+		"Nom": "Eau",
+		"Solvant": true,
+		"Image": "/Img/15026.png",
+		"Rarity": "White"
+	},
+	{
+		"Id": 2,
+		"Nom": "Bave",
+		"Solvant": false,
+		"Image": "/Img/15794.png",
+		"Rarity": "White"
+	},
+	{
+		"Id": 3,
+		"Nom": "Poudre",
+		"Solvant": false,
+		"Image": "/Img/48282.png",
+		"Rarity": "White"
+	},
+	{
+		"Id": 4,
+		"Nom": "Potion",
+		"Solvant": false,
+		"Image": "/Img/12016.png",
+		"Rarity": "White"
+	}
+]

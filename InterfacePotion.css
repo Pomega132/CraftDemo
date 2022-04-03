@@ -1,72 +1,207 @@
-body{
+:root {
+    --CornerColor: transparent;
+    --CornerValueColor: white;
+}
+
+body {
     background: rgb(61,64,61);
     background: linear-gradient(135deg, rgba(61,64,61,1) 10%, rgba(97,102,98,1) 100%);
     color: #dae6dc;
+    overflow: hidden;
 }
 
-h3{
+h3 {
     text-shadow: 2px 2px #181a18;
     text-align: center;
 }
 
-.InterfaceAlchimie{
+#Niveau {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+    #Niveau > div {
+        text-shadow: 2px 2px #181a18;
+    }
+
+    #Niveau > input {
+        padding: 5px;
+        border-radius: 7px;
+        border-style: solid;
+        border-color: #181a18;
+        background: #dae6dc;
+        color: #181a18;
+    }
+
+.InterfaceAlchimie {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.InterfaceSlots{
+.InterfaceSlots {
     display: flex;
-    gap: 15px;    
+    gap: 15px;
 }
 
-.Solvant{
-    flex:1;
+.Solvant {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.Ingredients{
-    flex:4;
+.Ingredients {
+    flex: 4;
 }
 
-.IngredientsTitle{
-    display: flex;   
+.IngredientsTitle {
+    display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.IngredientsTitle > h3{
-    flex:1;
-}
+    .IngredientsTitle > h3 {
+        flex: 1;
+    }
 
-.IngredientsTitle > div{
-    width: 25px;
-}
+    .IngredientsTitle > div {
+        width: 25px;
+    }
 
-.IngredientsSlots{
+.IngredientsSlots {
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 15px;
     justify-content: center;
 }
 
-.Case{
+.Case {
     width: 150px;
     height: 150px;
-    border: 2px solid #181a18;    
+    border: 2px solid #181a18;
     background: rgb(61,64,61);
     background: linear-gradient(315deg, rgba(61,64,61,1) 10%, rgba(97,102,98,1) 100%);
     border-radius: 15%;
+    position: relative;
 }
 
-.Case.Disabled{
+    .Case img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.CornerGreen {
+    --CornerColor: #4caf50;
+}
+
+.CornerRed {
+    --CornerColor: #f44336;
+}
+
+.CornerBlue {
+    --CornerColor: #2196f3;
+}
+
+.CornerYellow {
+    --CornerColor: #ffeb3b;
+    --CornerValueColor: black;
+}
+
+.CornerOrange {
+    --CornerColor: #ff9800;
+    --CornerValueColor: black;
+}
+
+.CornerWhite {
+    --CornerColor: #dae6dc;
+    --CornerValueColor: black;
+}
+
+.CornerViolet {
+    --CornerColor: #673ab7;
+}
+
+.CornerUnknow {
+    --CornerColor: #181a18;
+}
+
+.Corner {
+    background: linear-gradient(30deg, rgba(61,64,61,0) 78%, var(--CornerColor) 78% 100%);
+    position: absolute;
+    border-radius: 15%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+.CornerValue {
+    position: absolute;
+    color: var(--CornerValueColor);
+    top: 5px;
+    right: 5px;
+    width: 45px;
+    text-align: center;
+}
+
+.Case:not(.Disabled):hover {
+    filter: brightness(0.65);
+}
+
+.Case.Disabled {
     opacity: .3;
     border-style: dashed;
 }
 
-.Result{
+.Result {
     align-self: center;
 }
+
+.IconButton:hover {
+    filter: drop-shadow(0px 0px 6px black);
+}
+
+.IconButton:active {
+    filter: invert(.8);
+}
+
+#ListIngredients,
+#ListRecettes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 2px #181a18 solid;
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+    background: rgb(61,64,61);
+    background: linear-gradient(135deg, rgba(61,64,61,1) 10%, rgba(97,102,98,1) 100%);
+}
+
+.Vollet {
+    left: 100%;
+    transition: 2s;
+}
+
+    .Vollet.OpenVollet {
+        left: calc(100% - 400px);
+    }
+
+#ListIngredients > div,
+#ListRecettes > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    #ListIngredients > div:hover,
+    #ListRecettes > div:hover {
+        border: 2px black solid;
+        border-radius: 15px;
+        background: linear-gradient(135deg, rgba(61,64,61,1) 10%, rgba(97,102,98,1) 100%);
+    }
