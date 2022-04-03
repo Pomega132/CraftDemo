@@ -24,14 +24,14 @@ function Controleur($scope, $http)
         $scope.PreVisualisation = null;
         $scope.OpenVollet = false;
 
-        $http.get("/Items.json").then(
+        $http.get("Items.json").then(
             function (datas)
             {
                 $scope.Ingredients = datas.data;
             }
         );
 
-        $http.get("/Recettes.json").then(
+        $http.get("Recettes.json").then(
             function (datas)
             {
                 $scope.Recettes = datas.data;
@@ -95,7 +95,7 @@ function Controleur($scope, $http)
         if (recette && recette.Connue)
             return recette.Image;
         else
-            return "/Img/Defaults/12016.png";
+            return "Img/Defaults/12016.png";
     }
 
     $scope.GetCraftChance = function ()

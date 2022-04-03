@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Img",
+    "\\Img\\Defaults"
   ],
-  "SelectedNode": "\\InterfacePotion.css",
+  "SelectedNode": "\\InterfacePotion.html",
   "PreviewInSolutionExplorer": false
 }
