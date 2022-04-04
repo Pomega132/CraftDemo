@@ -79,6 +79,9 @@ function Controleur($scope, $http)
         if ($scope.Solvant.Qty > 0)
             $scope.Solvant.Qty--;
 
+        if ($scope.Solvant.Qty < $scope.IngredientsSelected.length)
+            $scope.IngredientsSelected.splice($scope.Solvant.Qty * 2, 2);
+
         if ($scope.Solvant.Qty == 0)
             $scope.Solvant.Item = null;
     }
